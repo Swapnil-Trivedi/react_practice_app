@@ -11,12 +11,15 @@ export default function TextForm(props) {
         console.log("Uppercase was clicked")
         let newText=text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to upper case succesfully","success");
     }
 
     const handleLowerClick = () => {
         console.log("Lowercase was clicked");
         let newText=text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to lower case succesfully","success");
+
       
     }
     
@@ -24,12 +27,15 @@ export default function TextForm(props) {
         console.log("Clear text clicked");
         let newText="";
         setText(newText);
+        props.showAlert("Text cleared succesfully","success");
+
     }
 
     const handleCopyClick=()=>{
         let text=document.getElementById('myBox');
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text copied succesfully","success");
 
     }
 
