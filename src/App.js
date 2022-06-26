@@ -26,7 +26,6 @@ function App() {
     <>
     <Navbar title="TextUtils"/>
     <Alert alert={alert}/>
-    <About/>
     <TextForm  showAlert={showAlert} heading=" Enter Text to Analyze" />
     </>
   );
